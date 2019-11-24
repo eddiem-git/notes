@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"870b502a95","applicationID":"175895155","transactionName":"JlcNEUJcXg9UShZbSQBWFwBIR1AMXlNKG00AQBcHX1xZEB5LUVtO","queueTime":0,"applicationTime":97,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122475842-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122475842-1');
+</script>
+
+
+    <title>Introduction to Programming Using Java, Eighth Edition - Open Textbook Library</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ik3Ki3aR3TjOcbDl4/whQKThsf+DnO431hHdEib40/F4kuAGAfK+B9BnkWU05jKp5TlgkudB9QfBe0nfhqQDQg==" />
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" media="all" href="/assets/library-a2abf00b589e00d01f897f0fba913da09b7d9922cbca4e972a9e1963e26e4c13.css" data-turbolinks-track="reload" />
+    <script src="/assets/library-205a9badb573bb8fbc13beb0afb042c87d040dd7d351e3e7214c6e7de8974b44.js" data-turbolinks-track="reload" async="async"></script>
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-430c4f2d215927fdf6bbd54a15ad257b10f5820e001d5eb13205a912d6649b60.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-a2aaf6ef38d6b119ba0ec78adf6796cfd9e2185bc0b0f31e787b91fb80827e24.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-3144690128ce242847a1b0bed4fd7279ed3a8354755a78a2be02690dfe70805f.png">
+<link rel="manifest" href="/assets/favicon/site-ba8f04d004c01e4e402e3789e8bdae54cfe3c0e0e1c439b5123f8e52b85bcfd4.webmanifest">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab-7bf0e4de4f635ad8c17f4753b9321a7affcb9eb5c3ab1fe10ec8262c1ffb4f4e.svg" color="#872384">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+      <script type="application/ld+json">
+        {
+		"@context":"https://schema.org",
+    "@type":"Book",
+    "@id": "419",
+"name" : "Introduction to Programming Using Java, Eighth Edition",
+"author": [{"@type":"Person","name":"David Eck"}],
+"publisher": [{"@type":"Organization","name":"Independent"}],
+"image": "https://open.umn.edu/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcTRDIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6c6f5484ada80aad46b305031d46f9f7a13eb467/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lMT1RoNE1qQXdCam9HUlZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--0d7d5444fd3cef07650424add2baed2238869e12/0000ProUsiJav.png",
+"description": "Welcome to the Eighth Edition of Introduction to Programming Using Java, a free, on-line textbook on introductory programming, which uses Java as the language of instruction. This book is directed mainly towards beginning programmers, although it might also be useful for experienced programmers who want to learn something about Java. It is not meant to provide complete coverage of the Java language. The eighth edition requires Java 8 or later, and it uses JavaFX for GUI programming. Version 8.1 is a small update of Version 8.0. This version briefly covers some of the new features in Java 11 and makes it clearer how to use this book with Java 11 and later.",
+"inLanguage": "English",
+"copyrightYear": 2015,
+"license": "Attribution-NonCommercial-ShareAlike",
+"genre": "Computer Science & Information Systems",
+"url" : "https://open.umn.edu/opentextbooks/textbooks/419",
+"aggregateRating": {"@type": "AggregateRating","ratingValue": "5","reviewCount": "2"},
+"isAccessibleForFree": true
+		}
+      </script>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="container-sub">
+        <div class="half">
+          <header>
+            <a href="/opentextbooks"><img width="100%" alt="Library Home" title="Open Textbook Library logo" src="/assets/opentextbooks/otl_logo-e67c14f47603ec666d1d4fa15ceb84a373a755fc39e06564a2f717331a6180d5.png" /></a>
+          </header>
+        </div>
+        <div class="half">
+          <search>
+            <form action="/opentextbooks/textbooks" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <div id="searchOER">
+                <label style="display:none" for="term">Term</label>
+                <input placeholder="Search the Library" title="Search Field" class="searchtext" type="text" name="term" id="term" />
+                <input type="submit" name="commit" value="Go" class="searchbutton" data-disable-with="Go" />
+              
+              </div>
+</form>          </search>
+        </div>
+        <div class="whole border-top">
+          <nav id="Global">
+            <ul>
+              <li>
+                <a href="/opentextbooks/subjects">Browse Subjects</a>
+                <ul>
+    <li>
+      <a title="18 Accounting &amp; Finance textbooks" href="/opentextbooks/subjects/accounting-finance">Accounting &amp; Finance</a>
+    </li>
+    <li>
+      <a title="57 Business textbooks" onmouseover="toggleOn(menu2);" href="/opentextbooks/subjects/business">Business</a>
+      <a class="galaxy" aria-describedby="Expand Business" href="javascript: toggle(menu2)"><span class="nova">&nbsp;+&nbsp;</span></a>
+      <ul id="menu2" style="display:none">
+        <li><a title="8 Business: Human Resources textbooks" href="/opentextbooks/subjects/human-resources">Human Resources</a></li>
+        <li><a title="25 Business: Management textbooks" href="/opentextbooks/subjects/management">Management</a></li>
+        <li><a title="8 Business: Marketing textbooks" href="/opentextbooks/subjects/marketing">Marketing</a></li>
+      </ul>
+    </li>
+    <li>
+      <a title="71 Computer Science &amp; Information Systems textbooks" href="/opentextbooks/subjects/computer-science-information-systems">Computer Science &amp; Information Systems</a>
+    </li>
+    <li>
+      <a title="21 Economics textbooks" href="/opentextbooks/subjects/economics">Economics</a>
+    </li>
+    <li>
+      <a title="43 Education textbooks" href="/opentextbooks/subjects/education">Education</a>
+    </li>
+    <li>
+      <a title="29 Engineering textbooks" href="/opentextbooks/subjects/engineering">Engineering</a>
+    </li>
+    <li>
+      <a title="117 Humanities textbooks" onmouseover="toggleOn(menu6);" href="/opentextbooks/subjects/humanities">Humanities</a>
+      <a class="galaxy" aria-describedby="Expand Humanities" href="javascript: toggle(menu6)"><span class="nova">&nbsp;+&nbsp;</span></a>
+      <ul id="menu6" style="display:none">
+        <li><a title="12 Humanities: Arts textbooks" href="/opentextbooks/subjects/arts">Arts</a></li>
+        <li><a title="16 Humanities: History textbooks" href="/opentextbooks/subjects/history">History</a></li>
+        <li><a title="39 Humanities: Languages textbooks" href="/opentextbooks/subjects/languages">Languages</a></li>
+        <li><a title="1 Humanities: Linguistics textbooks" href="/opentextbooks/subjects/linguistics">Linguistics</a></li>
+        <li><a title="64 Humanities: Literature, Rhetoric, and Poetry textbooks" href="/opentextbooks/subjects/literature-rhetoric-and-poetry">Literature, Rhetoric, and Poetry</a></li>
+        <li><a title="17 Humanities: Philosophy textbooks" href="/opentextbooks/subjects/philosophy">Philosophy</a></li>
+      </ul>
+    </li>
+    <li>
+      <a title="21 Journalism, Media Studies &amp; Communications textbooks" href="/opentextbooks/subjects/journalism-media-studies-communications">Journalism, Media Studies &amp; Communications</a>
+    </li>
+    <li>
+      <a title="59 Law textbooks" href="/opentextbooks/subjects/law">Law</a>
+    </li>
+    <li>
+      <a title="81 Mathematics textbooks" onmouseover="toggleOn(menu7);" href="/opentextbooks/subjects/mathematics">Mathematics</a>
+      <a class="galaxy" aria-describedby="Expand Mathematics" href="javascript: toggle(menu7)"><span class="nova">&nbsp;+&nbsp;</span></a>
+      <ul id="menu7" style="display:none">
+        <li><a title="32 Mathematics: Applied textbooks" href="/opentextbooks/subjects/applied">Applied</a></li>
+        <li><a title="67 Mathematics: Pure textbooks" href="/opentextbooks/subjects/pure">Pure</a></li>
+      </ul>
+    </li>
+    <li>
+      <a title="11 Medicine textbooks" href="/opentextbooks/subjects/medicine">Medicine</a>
+    </li>
+    <li>
+      <a title="60 Natural Sciences textbooks" onmouseover="toggleOn(menu8);" href="/opentextbooks/subjects/natural-sciences">Natural Sciences</a>
+      <a class="galaxy" aria-describedby="Expand Natural Sciences" href="javascript: toggle(menu8)"><span class="nova">&nbsp;+&nbsp;</span></a>
+      <ul id="menu8" style="display:none">
+        <li><a title="30 Natural Sciences: Biology textbooks" href="/opentextbooks/subjects/biology">Biology</a></li>
+        <li><a title="15 Natural Sciences: Chemistry textbooks" href="/opentextbooks/subjects/chemistry">Chemistry</a></li>
+        <li><a title="17 Natural Sciences: Physics textbooks" href="/opentextbooks/subjects/physics">Physics</a></li>
+      </ul>
+    </li>
+    <li>
+      <a title="49 Social Sciences textbooks" onmouseover="toggleOn(menu9);" href="/opentextbooks/subjects/social-sciences">Social Sciences</a>
+      <a class="galaxy" aria-describedby="Expand Social Sciences" href="javascript: toggle(menu9)"><span class="nova">&nbsp;+&nbsp;</span></a>
+      <ul id="menu9" style="display:none">
+        <li><a title="23 Social Sciences: Psychology textbooks" href="/opentextbooks/subjects/psychology">Psychology</a></li>
+        <li><a title="13 Social Sciences: Sociology textbooks" href="/opentextbooks/subjects/sociology">Sociology</a></li>
+      </ul>
+    </li>
+    <li>
+      <a title="16 Student Success textbooks" href="/opentextbooks/subjects/student-success">Student Success</a>
+    </li>
+</ul>
+              </li>
+              <li>
+                <a href="/opentextbooks/books">Our Textbooks</a>
+                <ul>
+                  <li><a href="/opentextbooks/faq">FAQs</a></li>
+                  <li><a href="/opentextbooks/submit">Submit a book</a></li>
+                  <li><a href="/opentextbooks/discovery">Discovery</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="/opentextbooks/about">About Us</a>
+                <ul>
+                  <li><a href="/opentextbooks/friends">Friends</a></li>
+                  <li><a href="/opentextbooks/contact">Contact</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <br class="clearfloat">
+        
+        <br class="clearfloat">
+        <main class="whole" id="maincontent">
+          
+<div id="maincontent">
+  <div class="LongDescription">
+    <div class="third">
+      <img alt="Introduction to Programming Using Java, Eighth Edition cover image" src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcTRDIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6c6f5484ada80aad46b305031d46f9f7a13eb467/0000ProUsiJav.png" />
+      
+    </div>
+    <div class="twothird">
+      <h1>Introduction to Programming Using Java, Eighth Edition</h1>
+      <p>(<a href="#Reviews">2 reviews</a>)</p>
+      <p><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /></p>
+      <p></p>
+        <p>David J. Eck, Hobart and William Smith Colleges</p>
+      <p></p>
+      <p>Pub Date: 2015</p>
+      <p></p>
+      <p>Publisher: 
+        <a href="http://math.hws.edu/javanotes/">Independent</a>
+      </p>
+      <p></p>
+      <p>Language: English</p>
+    </div>
+    <div class="whole">
+      <h2>Read this book</h2>
+      <ul class="BookTypes">
+          <li><a onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;Textbook Link&#39;, &#39;event_label&#39;: &#39;http:// http://math.hws.edu/eck/cs124/downloads/javanotes8-linked.pdf&#39;});" href="http:// http://math.hws.edu/eck/cs124/downloads/javanotes8-linked.pdf">PDF</a></li>
+          <li><a onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;Textbook Link&#39;, &#39;event_label&#39;: &#39;http://math.hws.edu/eck/cs124/downloads/javanotes8.epub&#39;});" href="http://math.hws.edu/eck/cs124/downloads/javanotes8.epub">ePub</a></li>
+          <li><a onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;Textbook Link&#39;, &#39;event_label&#39;: &#39;http://math.hws.edu/eck/cs124/downloads/javanotes8.mobi&#39;});" href="http://math.hws.edu/eck/cs124/downloads/javanotes8.mobi">eBook (EPUB &amp; .mobi)</a></li>
+          <li><a onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;Textbook Link&#39;, &#39;event_label&#39;: &#39;http://math.hws.edu/javanotes/&#39;});" href="http://math.hws.edu/javanotes/">Online</a></li>
+          <li><a onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;Textbook Link&#39;, &#39;event_label&#39;: &#39;http://www.lulu.com/shop/david-eck/introduction-to-programming-using-java/paperback/product-24154166.html&#39;});" href="http://www.lulu.com/shop/david-eck/introduction-to-programming-using-java/paperback/product-24154166.html">Print B&amp;W</a></li>
+      </ul>
+    </div>
+      <div class="whole">
+        <h2>Conditions of Use</h2>
+
+        <p class="Badge-Condition">
+          <img style="border-width: 0px" src="/assets/licenses/AttributionNonCommercialShareAlike-3375eb05d6d41c138bcce123a7a559852d1bca2100089042d10ca6a60fa861a7.png" />
+          <a href="http://creativecommons.org/licenses/">Attribution-NonCommercial-ShareAlike</a><br/>
+          CC BY-NC-SA
+        </p>
+      </div>
+    <div class="whole">
+      <h2 id="Reviews">Reviews</h2>
+      <p style="margin-bottom:5px"><a href="/opentextbooks/reviews/rubric">Learn more about reviews.</a></p>
+      <div class="whole">
+          <div id="readMore1970" style="display:block">
+          <p><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /></p>
+          <p style="color: #666"><reviewer>Reviewed by John McManus, Assistant Professor, Randolph-Macon College on 3/27/18</reviewer></p>
+          <p>This textbook is comprehensive. It covers a significant amount of material in a well-thought out and logical manner. The text starts with basic programming concepts introducing variables, types and input and output.  The author covers the basics... <a aria-describedby="Expand review by John McManus, Assistant Professor, Randolph-Macon College" href="javascript: doubleToggle(reviewTag1970, readMore1970)">read more</a></p>
+          </div>
+          <div id="reviewTag1970" style="display:none">
+            <p><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /></p>
+<p style="color: #666"><reviewer>Reviewed by John McManus, Assistant Professor, Randolph-Macon College on 3/27/18</reviewer></p>
+
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Comprehensiveness</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript: doubleToggle(reviewTag1970, readMore1970)">see less</a>
+</p>
+<p>This textbook is comprehensive. It covers a significant amount of material in a well-thought out and logical manner. The text starts with basic programming concepts introducing variables, types and input and output.  The author covers the basics of a variety of programming environments including Eclipse, NetBeans, and the command line environment. The next section introduces control structures, exception handling, and introduces arrays and GUI programming. The early introduction of arrays and GUI program is a nice feature, allow students to add address slightly more complex problems.  The book introduces objects and classes late, allowing introductory students to focus on syntax and basic problem solving before adding objects.  I believe the text is well suited to a two-semester introductory sequence, or an upper level Software Design Course.  The text includes quizzes at the end of each chapter, as well as programming exercises.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Accuracy</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>I did not see any technical errors or inaccuracies in the book.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Relevance/Longevity</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 4</rating>
+</p>
+<p>The book uses the Swing library used to build GUI applications. Swing has been replaced with JavaFX. Swing is still widely used and okay for an introductory courses; the text should be updated to cover JavaFX.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Clarity</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>The author uses an easy to read, conversational writing style and provides very thorough explanations.  The flow is very logical, with sections building on the prior section.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Consistency</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>The author uses consistent, and for the most part, modern terminology.  The use of “subroutine” can be a confusing to students.  The more correct term “methods” is also used and it’s not clear why “subroutines” is introduced.  I appreciate the use of JavaDoc.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Modularity</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>The text is as modular, and the order that the modules are introduced in is very logical.  It is possible to re-order the modules to match your preferences for introducing specific topics.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Organization/Structure/Flow</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 4</rating>
+</p>
+<p>I like the organization of the book for an introductory course, and for a course on software design. approach. Objects and classes are covered in chapter five, after the basic programming building blocks such as control structures and methods have been covered.  This allows you to choose the depth that you cover topics, going slower in an introductory class, but faster in a course on  Software design. I would recommend moving some sections around.  I like to introduce arrays early, and I defer exceptions until a bit later.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Interface</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>I did not find any interface issues. The text includes PDF links in the table of contents, and also when the text makes a reference to another section. The author also includes links to the full code examples on the book's web site. Figures are easy to read and high resolution.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Grammatical Errors</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>The text is well edited. I found a very small number of spelling or grammatical errors in the book.  The book is “cleaner” that many professional edited textbooks.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Cultural Relevance</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>I didn't notice any instances of the text being culturally insensitive. It is difficult to always find neutral examples or references.  The sample problems are appropriate.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Comments</rubrik>
+</p>
+<p>
+  This is one of the best Java programming texts that I have reviewed.  I am currently using a different text and plan to switch to this text next semester.  It is very detailed.  The author provides explanations of the core concepts and provides great examples.  The modular approach allows it to be used in an introductory CS class, with Java as a first language; and in a software design class focusing on object-oriented design.
+</p>
+          </div>
+          <p>&nbsp;</p>
+          <div id="readMore1362" style="display:block">
+          <p><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /></p>
+          <p style="color: #666"><reviewer>Reviewed by Ian Finlayson, Assistant Professor, The University of Mary Washington on 6/20/17</reviewer></p>
+          <p>This textbook is remarkably comprehensive.  It covers a tremendous amount of material, including nearly every facet of the Java programming language (such as anonymous inner classes, lambdas, variable arity methods etc.).  It also includes a... <a aria-describedby="Expand review by Ian Finlayson, Assistant Professor, The University of Mary Washington" href="javascript: doubleToggle(reviewTag1362, readMore1362)">read more</a></p>
+          </div>
+          <div id="reviewTag1362" style="display:none">
+            <p><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /><img title="whole star" src="/assets/opentextbooks/stars/star-whole-1b93d18fb50135830b28977bbdc26c003c5f43ea3c827a66a626c7ec6f1b5046.png" /></p>
+<p style="color: #666"><reviewer>Reviewed by Ian Finlayson, Assistant Professor, The University of Mary Washington on 6/20/17</reviewer></p>
+
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Comprehensiveness</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript: doubleToggle(reviewTag1362, readMore1362)">see less</a>
+</p>
+<p>This textbook is remarkably comprehensive.  It covers a tremendous amount of material, including nearly every facet of the Java programming language (such as anonymous inner classes, lambdas, variable arity methods etc.).  It also includes a chapter covering basic data structures such as lists, stacks, queues and binary trees, as well as chapters on multi-threading and networking, in addition to its thorough and integrated coverage of graphical user interfaces.  When using this text for a one semester CS 1 course, I use roughly half of the content.  I would probably not use it for a non-major's CS 0 course, as it could be an overwhelming amount of material for students.
+
+The book is excellent for self-study - many students love having all the extra material available even if we don't cover it in class.
+
+One area where I would have like to have seen more content is in the books coverage of recursion.  There is one section in chapter nine dealing with recursion which contains four examples.  Recursion is also used for implementing lists and trees, but it would be nice to have a slightly longer treatment as it is a confusing topic for many beginning students.
+
+The text does not include an index.  The book itself also does not contain a glossary, but there is one on the companion web site.  The text includes quizzes at the end of each chapter, as well as programming exercises.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Accuracy</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>I did not notice any technical errors or inaccuracies in the book.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Relevance/Longevity</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 4</rating>
+</p>
+<p>The book mostly covers Java 7, with some treatment of Java 8 features, so as of now, the book is perfectly up to date.  Future changes to Java likely won't necessitate major changes to the text, and the author has updated the text several times (currently on version 7).
+
+The one area of slight concern is with the Swing library used to build GUI applications.  Oracle has replaced Swing with JavaFX, which is the new preferred way of writing GUIs in Java.  Still, Swing is widely used and a fine thing to use for introductory courses.  Moreover, Swing will be a supported part of Java for a long time as it is still so widely used.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Clarity</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>I think the clarity of writing is the best feature of this text.  The author uses an easy to read, conversational writing style.  The text is also very thorough in its explanations.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Consistency</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>The author does a good job using consistent terminology.  He explains new terms which are introduced and is very careful about phrasing in general.  For instance when talking about objects he has this to say:
+
+"It is certainly not at all true to say that the object is 'stored in the variable std.' The proper terminology is that 'the variable std refers to or points to the object".
+
+Actually speaking about the terminology explicitly like this is really helpful.
+
+The text does use the term "subroutine".  While it is internally consistent about this, it is not really consistent with other sources which nearly always refer to them as "methods" in the context of Java.  It is not a big point, but students may be confused because they are not called subroutines in other resources they may consult.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Modularity</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 4</rating>
+</p>
+<p>The text is as modular as any other introductory programming text book I have seen.  It wouldn't be possible to make sense of the example programs in later chapters without a solid mastery of the material in earlier chapters, but that's expected with this type of text.  That said, the book does a good job of being as modular as it can.  For instance, several of the later sections in a chapter can be skipped over, and, as I describe below, I re-arrange the material slightly to fit my course.
+
+One caveat to this is that many of the examples in later chapters make use of the GUI programming from chapter six.  When considering this text, you should be aware that its use of graphics is pretty fundamental and not something you could easily skip over.  I see this as a positive as it adds some interest to the example programs which are graphical.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Organization/Structure/Flow</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>I like the organization of the book quite a lot.  It does not use the "objects first" approach.  Objects and classes are covered in chapter five, after the basic programming building blocks such as control structures and methods.  I did find that some of the later sections within a chapter were things I didn't want to introduce to students at that point.  For instance I skip the section on exceptions at the end of chapter three, and the sections on interfaces and nested classes at the end of chapter five.
+
+I do think that the putting off arrays until chapter seven is a mistake, mostly because it is just hard to give good assignments that don't use arrays.  When teaching with this book, I cover chapter seven after chapter four.
+
+Overall though, the book does a fine job of transitioning from one topic to the next as it covers not only the particulars of the Java programming language, but the art of programming itself.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Interface</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>I did not find any interface issues at all.  The text includes helpful PDF links in the table of contents, and also when the text makes a reference to another section.  When discussing the example programs, the author also includes links to the full code on the book's web site, which is helpful.  Figures are easy to read and high resolution.  One suggestion I would have to improve the interface would be to include syntax highlighting for code listings.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Grammatical Errors</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>The text is remarkably well edited for its length.  I only noticed a handful of spelling or grammatical errors in the book.</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Cultural Relevance</rubrik>
+  <rating style="color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;rating: 5</rating>
+</p>
+<p>I didn't notice any instances of the text being culturally insensitive.  The text did not refer to people very often at all.  In the few times it mentions the user or programmer, the author uses male and female pronouns equally.  For instance at one point the text will mention a guess the number program telling the user "he lost", and later on saying a blackjack program should quit when the user wants to or when "she runs out of money".</p>
+<p>
+  <rubrik style="font-size: larger; font-weight: bold">Comments</rubrik>
+</p>
+<p>
+  I think this book is superior to other introductory programming texts that I have used, even without considering the fact that it is open and free.  It is very detailed and provides clear expositions and great examples on everything that can be included in an introductory course (and then some).  The few criticisms I have for the book can be easily worked around.
+</p>
+          </div>
+          <p>&nbsp;</p>
+      </div>
+    </div>
+  </div>
+  <div class="BookDetails">
+      <div class="whole" id="TOC">
+        <h2 id="Table-contents">Table of Contents</h2>
+        <ul>
+<li>Chapter 1: Overview: The Mental Landscape</li>
+<li>Chapter 2: Programming in the Small I: Names and Things</li>
+<li>Chapter 3: Programming in the Small II: Control</li>
+<li>Chapter 4: Programming in the Large I: Subroutines</li>
+<li>Chapter 5: Programming in the Large II: Objects and Classes</li>
+<li>Chapter 6: Introduction to GUI Programming</li>
+<li>Chapter 7: Arrays and ArrayLists</li>
+<li>Chapter 8: Correctness, Robustness, Efficiency</li>
+<li>Chapter 9: Linked Data Structures and Recursion</li>
+<li>Chapter 10: Generic Programming and Collection Classes</li>
+<li>Chapter 11: Input/Output Streams, Files, and Networking</li>
+<li>Chapter 12: Threads and Multiprocessing</li>
+<li>Chapter 13: GUI Programming Continued</li>
+</ul>
+      </div>
+      <div class="whole" id="AboutBook">
+        <h2 class="BD-Hide">About the Book</h2>
+        <p>Welcome to the Eighth Edition of Introduction to Programming Using Java, a free, on-line textbook on introductory programming, which uses Java as the language of instruction. This book is directed mainly towards beginning programmers, although it might also be useful for experienced programmers who want to learn something about Java. It is not meant to provide complete coverage of the Java language.</p>
+<p>The eighth edition requires Java 8 or later, and it uses JavaFX for GUI programming. Version 8.1 is a small update of Version 8.0. This version briefly covers some of the new features in Java 11 and makes it clearer how to use this book with Java 11 and later.</p>
+      </div>
+      <div class="whole" id="AboutContributors">
+        <h2 id="authors">About the Contributors</h2>
+        		<h3>Author</h3>
+			<p><strong>David J. Eck Ph.D. </strong>is a Professor at Department of Mathematics and Computer Science at the Hobart and William Smith Colleges.</p>
+<p>&nbsp;</p>
+
+      </div>
+  </div>
+
+</div>
+
+
+        </main>
+        <br class="clearfloat">
+        <footer>
+          <div class="whole">
+            <address style="text-align:center">
+              <p class="locate">
+                <span class="icon-map">Center for Open Education</span> |
+                <span class="adr">330 Wulling Hall</span> |
+                <span class="street-address">86 Pleasant St SE</span> |
+                <span class="locality">Minneapolis</span>, <span class="region">MN</span>
+                <span class="postal-code">55455</span>
+                <span class="country-name">USA</span> |
+                <span class="icon-mail"><a href="mailto:open@umn.edu">open@umn.edu</a></span>
+                <br><a href="http://www.cehd.umn.edu">College of Education and Human Development</a> | <a href="http://www.umn.edu">University of Minnesota</a>
+              </p>
+            </address>
+          </div>
+          <div class="whole">
+            <p style="text-align:center">
+              <a href="/otn/policy">Privacy Policy</a><br/><br/>
+              <a alt="Attribution License" href="http://creativecommons.org/licenses/by/4.0/"><img width="92" height="35" alt="Attribution License" src="/assets/licenses/Attribution-795a114519c1b8282054f8d4831bbe047cce12abdd98fe2d948c06bb57f63a7b.png" /></a><br/>
+              Except where otherwise noted, content on this site is licensed under a
+              <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>.
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
